@@ -37,7 +37,8 @@ a {
   transition: color 0.3s ease;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -86,10 +87,12 @@ button {
   --text-muted: #64748B;
   --text-accent: var(--accent-blue-light);
 
-  /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.04);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-blur: 20px;
+  /* Glassmorphism (Enhanced) */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-blur: 24px;
+  --glass-bg-strong: rgba(10, 15, 30, 0.65);
+  --glass-border-strong: rgba(255, 255, 255, 0.15);
 
   /* Spacing */
   --section-padding: 120px 0;
@@ -184,13 +187,74 @@ button {
   border-radius: var(--radius-lg);
   padding: 32px;
   transition: all var(--transition-base);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 .glass-card:hover {
-  background: var(--bg-card-hover);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.18);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Strong glass for on-image contexts */
+.glass-card-strong {
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all var(--transition-base);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.glass-card-strong:hover {
+  background: rgba(10, 15, 30, 0.75);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Parallax Section ── */
+.parallax-section {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.parallax-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 11, 24, 0.75) 0%, rgba(6, 11, 24, 0.6) 40%, rgba(6, 11, 24, 0.8) 100%);
+  z-index: 1;
+}
+
+.parallax-section>* {
+  position: relative;
+  z-index: 2;
+}
+
+/* Dark overlay utility */
+.dark-overlay {
+  position: relative;
+}
+
+.dark-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 11, 24, 0.7);
+  z-index: 1;
+}
+
+.dark-overlay>* {
+  position: relative;
+  z-index: 2;
 }
 
 /* ── Buttons ── */
@@ -226,12 +290,10 @@ button {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
+  background: linear-gradient(45deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
   transform: rotate(45deg);
   transition: all 0.5s ease;
   opacity: 0;
@@ -366,20 +428,61 @@ button {
 }
 
 /* ── Utility ── */
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-.gap-8 { gap: 8px; }
-.gap-16 { gap: 16px; }
-.gap-24 { gap: 24px; }
-.gap-32 { gap: 32px; }
-.gap-48 { gap: 48px; }
-.hidden { display: none; }
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.gap-24 {
+  gap: 24px;
+}
+
+.gap-32 {
+  gap: 32px;
+}
+
+.gap-48 {
+  gap: 48px;
+}
+
+.hidden {
+  display: none;
+}
 
 /* ── Responsive ── */
 @media (max-width: 1199px) {
@@ -393,11 +496,11 @@ button {
     --section-padding: 60px 0;
     --container-padding: 0 16px;
   }
-  
+
   .section-heading {
     font-size: clamp(1.5rem, 6vw, 2.25rem);
   }
-  
+
   .section-desc {
     font-size: 1rem;
   }
