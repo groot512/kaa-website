@@ -241,10 +241,26 @@
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">KAA 소개</a></li>
-                <li class="nav-item"><a href="membership.html" class="nav-link">💎 멤버십</a></li>
+                <li class="nav-item"><a href="membership.html" class="nav-link"><svg width="14" height="14"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="vertical-align: -2px;">
+                            <path d="M6 3h12l4 6-10 13L2 9z" />
+                            <path d="M2 9h20" />
+                        </svg> 멤버십</a></li>
                 <li class="nav-item"><a href="services.html" class="nav-link"
-                        style="color: var(--accent-blue-light);">🚗 서비스</a></li>
-                <li class="nav-item"><a href="education.html" class="nav-link">📚 교육/자격</a></li>
+                        style="color: var(--accent-blue-light);"><svg width="14" height="14" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: -2px;">
+                            <path d="M5 17h14v-5H5z" />
+                            <path d="M7 12l2-5h6l2 5" />
+                            <circle cx="7" cy="17" r="2" />
+                            <circle cx="17" cy="17" r="2" />
+                        </svg> 서비스</a></li>
+                <li class="nav-item"><a href="education.html" class="nav-link"><svg width="14" height="14"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="vertical-align: -2px;">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg> 교육/자격</a></li>
                 <li class="nav-item"><a href="index.html#news" class="nav-link">협회 소식</a></li>
             </ul>
             <div class="nav-cta"><a href="membership.html" class="btn btn-primary btn-sm">가입하기</a></div>
@@ -269,11 +285,40 @@
     <section class="section">
         <div class="container">
             <div class="service-tabs reveal">
-                <button class="service-tab active" onclick="switchTab('fuel')">⛽ 유류비 절감</button>
-                <button class="service-tab" onclick="switchTab('gifticon')">🎁 기프티콘</button>
-                <button class="service-tab" onclick="switchTab('insurance')">🛡️ 보험</button>
-                <button class="service-tab" onclick="switchTab('global')">🌍 글로벌</button>
-                <button class="service-tab" onclick="switchTab('idp')">🪪 국제면허</button>
+                <button class="service-tab active" onclick="switchTab('fuel')"><svg width="14" height="14"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="vertical-align: -2px;">
+                        <path d="M3 22V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v17" />
+                        <path d="M15 12h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a1 1 0 0 0 1-1V9l-3-3" />
+                        <rect x="6" y="7" width="6" height="5" rx="1" />
+                    </svg> 유류비 절감</button>
+                <button class="service-tab" onclick="switchTab('gifticon')"><svg width="14" height="14"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="vertical-align: -2px;">
+                        <rect x="3" y="8" width="18" height="13" rx="2" />
+                        <path d="M12 8v13" />
+                        <path d="M12 8c-1.5-2-4-3-4-3s2.5 1 4 3c1.5-2 4-3 4-3s-2.5 1-4 3" />
+                    </svg> 기프티콘</button>
+                <button class="service-tab" onclick="switchTab('insurance')"><svg width="14" height="14"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="vertical-align: -2px;">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg> 보험</button>
+                <button class="service-tab" onclick="switchTab('global')"><svg width="14" height="14"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="vertical-align: -2px;">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M2 12h20" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg> 글로벌</button>
+                <button class="service-tab" onclick="switchTab('idp')"><svg width="14" height="14" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: -2px;">
+                        <rect x="3" y="4" width="18" height="16" rx="2" />
+                        <path d="M7 8h4" />
+                        <path d="M7 12h2" />
+                        <circle cx="15" cy="10" r="2" />
+                    </svg> 국제면허</button>
             </div>
 
             <!-- Fuel -->
@@ -284,7 +329,12 @@
                 </div>
                 <div class="service-detail-grid stagger-children">
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">⛽</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#60a5fa" stroke-width="1.8">
+                                <path d="M3 22V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v17" />
+                                <path d="M15 12h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a1 1 0 0 0 1-1V9l-3-3" />
+                                <rect x="6" y="7" width="6" height="5" rx="1" />
+                            </svg></div>
                         <h3>주유 할인</h3>
                         <p>GS칼텍스, SK에너지, S-Oil 등 전국 제휴 주유소에서 등급별 리터당 할인이 적용됩니다. 기존 카드사 할인과 중복 적용 가능.</p>
                         <span class="svc-tag tag-silver">Silver 5%</span>
@@ -292,19 +342,31 @@
                         <span class="svc-tag tag-platinum">Platinum 15%</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">🔌</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#10b981" stroke-width="1.8">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg></div>
                         <h3>전기차 충전 할인</h3>
                         <p>전기차 사용자를 위한 충전 할인 서비스. 전국 주요 충전소에서 kWh당 할인 적용.</p>
                         <span class="svc-tag tag-gold">Gold 이상</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">📍</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#f59e0b" stroke-width="1.8">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg></div>
                         <h3>주유소 찾기</h3>
                         <p>앱에서 현재 위치 기반으로 가까운 제휴 주유소를 실시간으로 검색. 유가 비교 기능 제공.</p>
                         <span class="svc-tag tag-all">전체 등급</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">📊</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#8b5cf6" stroke-width="1.8">
+                                <path d="M18 20V10" />
+                                <path d="M12 20V4" />
+                                <path d="M6 20v-6" />
+                            </svg></div>
                         <h3>주유 리포트</h3>
                         <p>월별 주유 내역, 절감 금액, 평균 유가 등을 한눈에 확인할 수 있는 개인 리포트 제공.</p>
                         <span class="svc-tag tag-all">전체 등급</span>
@@ -320,28 +382,48 @@
                 </div>
                 <div class="service-detail-grid stagger-children">
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">☕</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#a78bfa" stroke-width="1.8">
+                                <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+                                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+                                <line x1="6" y1="2" x2="6" y2="4" />
+                                <line x1="10" y1="2" x2="10" y2="4" />
+                                <line x1="14" y1="2" x2="14" y2="4" />
+                            </svg></div>
                         <h3>카페 / 음료</h3>
                         <p>스타벅스, 이디야, 투썸플레이스, 메가커피 등 인기 카페 기프티콘을 할인된 가격으로.</p>
                         <span class="svc-tag tag-silver">10%</span><span class="svc-tag tag-gold">20%</span><span
                             class="svc-tag tag-platinum">25%</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">🍽️</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#f59e0b" stroke-width="1.8">
+                                <path d="M3 11l19-9-9 19-2-8-8-2z" />
+                            </svg></div>
                         <h3>외식 / 배달</h3>
                         <p>배달의민족, 교촌치킨, BBQ, 도미노피자 등 외식 브랜드 기프티콘 할인.</p>
                         <span class="svc-tag tag-silver">10%</span><span class="svc-tag tag-gold">20%</span><span
                             class="svc-tag tag-platinum">30%</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">🏪</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#10b981" stroke-width="1.8">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg></div>
                         <h3>편의점</h3>
                         <p>CU, GS25, 세븐일레븐 등 편의점 금액권 및 상품권 할인 구매.</p>
                         <span class="svc-tag tag-silver">10%</span><span class="svc-tag tag-gold">15%</span><span
                             class="svc-tag tag-platinum">20%</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">🎬</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#ec4899" stroke-width="1.8">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8" />
+                                <path d="M12 17v4" />
+                                <polygon points="10 8 16 12 10 16 10 8" fill="#ec4899" />
+                            </svg></div>
                         <h3>문화 / 여가</h3>
                         <p>CGV, 롯데시네마, 넷플릭스, 멜론 등 문화생활 기프티콘 할인.</p>
                         <span class="svc-tag tag-gold">Gold 이상</span>
@@ -357,27 +439,73 @@
                 </div>
                 <div class="service-detail-grid stagger-children">
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">🏢</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#60a5fa" stroke-width="1.8">
+                                <rect x="4" y="2" width="16" height="20" rx="2" />
+                                <path d="M9 22v-4h6v4" />
+                                <path d="M8 6h.01" />
+                                <path d="M16 6h.01" />
+                                <path d="M12 6h.01" />
+                                <path d="M12 10h.01" />
+                                <path d="M12 14h.01" />
+                                <path d="M16 10h.01" />
+                                <path d="M16 14h.01" />
+                                <path d="M8 10h.01" />
+                                <path d="M8 14h.01" />
+                            </svg></div>
                         <h3>삼성화재</h3>
                         <p>다이렉트 자동차보험 멤버십 특별 할인. 온라인 간편 견적 제공.</p>
                         <span class="svc-tag tag-gold">Gold 7%</span><span class="svc-tag tag-platinum">Platinum
                             10%</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">🏢</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#60a5fa" stroke-width="1.8">
+                                <rect x="4" y="2" width="16" height="20" rx="2" />
+                                <path d="M9 22v-4h6v4" />
+                                <path d="M8 6h.01" />
+                                <path d="M16 6h.01" />
+                                <path d="M12 6h.01" />
+                                <path d="M12 10h.01" />
+                                <path d="M12 14h.01" />
+                                <path d="M16 10h.01" />
+                                <path d="M16 14h.01" />
+                                <path d="M8 10h.01" />
+                                <path d="M8 14h.01" />
+                            </svg></div>
                         <h3>KB손해보험</h3>
                         <p>KB다이렉트 자동차보험 회원 전용 할인. 무사고 추가 할인 적용.</p>
                         <span class="svc-tag tag-gold">Gold 7%</span><span class="svc-tag tag-platinum">Platinum
                             10%</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">🏢</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#60a5fa" stroke-width="1.8">
+                                <rect x="4" y="2" width="16" height="20" rx="2" />
+                                <path d="M9 22v-4h6v4" />
+                                <path d="M8 6h.01" />
+                                <path d="M16 6h.01" />
+                                <path d="M12 6h.01" />
+                                <path d="M12 10h.01" />
+                                <path d="M12 14h.01" />
+                                <path d="M16 10h.01" />
+                                <path d="M16 14h.01" />
+                                <path d="M8 10h.01" />
+                                <path d="M8 14h.01" />
+                            </svg></div>
                         <h3>한화손해보험</h3>
                         <p>한화 다이렉트 자동차보험 특별 프로모션. 멤버십 + 장기 고객 추가 할인.</p>
                         <span class="svc-tag tag-gold">Gold 이상</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">📋</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#f59e0b" stroke-width="1.8">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                                <polyline points="10 9 9 9 8 9" />
+                            </svg></div>
                         <h3>보험 비교 서비스</h3>
                         <p>여러 보험사의 견적을 한번에 비교. 나에게 맞는 최적의 보험을 찾아보세요.</p>
                         <span class="svc-tag tag-all">전체 등급</span>
@@ -393,25 +521,44 @@
                 </div>
                 <div class="service-detail-grid stagger-children">
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">🆘</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#ef4444" stroke-width="1.8">
+                                <path d="M15.6 11.6L22 7v10l-6.4-4.5" />
+                                <rect x="2" y="7" width="14" height="10" rx="2" />
+                            </svg></div>
                         <h3>해외 긴급출동</h3>
                         <p>해외에서 차량 고장, 사고 발생 시 현지 파트너를 통한 긴급출동 서비스 제공.</p>
                         <span class="svc-tag tag-gold">Gold 이상</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">🗺️</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#10b981" stroke-width="1.8">
+                                <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
+                                <line x1="9" y1="3" x2="9" y2="18" />
+                                <line x1="15" y1="6" x2="15" y2="21" />
+                            </svg></div>
                         <h3>해외 운전 지원</h3>
                         <p>국가별 운전 규정, 교통법규, 주유소 정보 등을 앱에서 실시간 제공.</p>
                         <span class="svc-tag tag-all">전체 등급</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">🚗</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#f59e0b" stroke-width="1.8">
+                                <path d="M5 17h14v-5H5z" />
+                                <path d="M7 12l2-5h6l2 5" />
+                                <circle cx="7" cy="17" r="2" />
+                                <circle cx="17" cy="17" r="2" />
+                            </svg></div>
                         <h3>해외 렌터카 할인</h3>
                         <p>글로벌 렌터카 업체(Hertz, Avis 등)와 제휴하여 회원 할인 제공.</p>
                         <span class="svc-tag tag-gold">Gold 이상</span>
                     </div>
                     <div class="glass-card service-detail-card tilt-card">
-                        <div class="svc-icon">📞</div>
+                        <div class="svc-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="#8b5cf6" stroke-width="1.8">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg></div>
                         <h3>24시간 다국어 콜센터</h3>
                         <p>한국어, 영어, 중국어, 일본어 등 다국어 긴급 상담 24시간 운영.</p>
                         <span class="svc-tag tag-platinum">Platinum 전용</span>
@@ -476,7 +623,12 @@
                 <h2 class="section-heading">전국 제휴 네트워크</h2>
             </div>
             <div class="fuel-map-placeholder reveal">
-                <div class="map-icon">🗺️</div>
+                <div class="map-icon"><svg width="64" height="64" viewBox="0 0 24 24" fill="none"
+                        stroke="rgba(255,255,255,0.3)" stroke-width="1.2">
+                        <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
+                        <line x1="9" y1="3" x2="9" y2="18" />
+                        <line x1="15" y1="6" x2="15" y2="21" />
+                    </svg></div>
                 <p style="color: var(--text-muted);">전국 500+ 제휴 가맹점 네트워크</p>
                 <a href="#" class="btn btn-secondary btn-sm">앱에서 가맹점 찾기</a>
             </div>
@@ -538,7 +690,26 @@
                 </div>
             </div>
             <div class="footer-bottom"><span>© 2026 한국자동차협회(KAA). All rights reserved.</span>
-                <div class="footer-social"><a href="#">📝</a><a href="#">📺</a><a href="#">📸</a><a href="#">💬</a>
+                <div class="footer-social"><a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                            <path d="M2 2l7.586 7.586" />
+                            <circle cx="11" cy="11" r="2" />
+                        </svg></a><a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z" />
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                        </svg></a><a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" />
+                            <circle cx="12" cy="12" r="5" />
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                        </svg></a><a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg></a>
                 </div>
             </div>
         </div>
