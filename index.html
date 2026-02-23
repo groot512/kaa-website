@@ -499,26 +499,236 @@
     <div class="container">
       <div class="app-grid">
         <div class="app-phone reveal-left">
-          <div class="phone-mockup">
+          <div class="phone-mockup" style="height: 640px;">
             <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="phone-app-icon">K</div>
-              <div class="phone-app-name">KAA 멤버십</div>
-              <div class="phone-app-desc">My Membership</div>
-              <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 8px; width: 100%;">
+            <div class="phone-screen"
+              style="background: #0a0e1a; padding: 0; justify-content: flex-start; overflow: hidden;">
+
+              <!-- App Header -->
+              <div
+                style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 16px 18px 10px;">
+                <div style="font-size: 1.05rem; font-weight: 800; letter-spacing: -0.5px;">K-Platform</div>
                 <div
-                  style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 10px; font-size: 0.75rem; text-align: left;">
-                  ⛽ 이번 달 절감액: <strong>₩47,200</strong>
-                </div>
-                <div
-                  style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 10px; font-size: 0.75rem; text-align: left;">
-                  🎁 사용 가능 쿠폰: <strong>12개</strong>
-                </div>
-                <div
-                  style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 10px; font-size: 0.75rem; text-align: left;">
-                  🏆 등급: <strong>Gold</strong>
+                  style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)"
+                    stroke-width="2" stroke-linecap="round">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                    <circle cx="18" cy="4" r="3" fill="#ef4444" stroke="#ef4444" />
+                  </svg>
                 </div>
               </div>
+
+              <!-- Gold Membership Card - real credit card ratio (85.6:53.98 ≈ 1.586:1) -->
+              <div
+                style="margin: 4px 14px 10px; aspect-ratio: 1.586/1; border-radius: 14px; background: linear-gradient(135deg, #8B6914 0%, #C9A84C 20%, #FFD700 40%, #DAA520 55%, #C9A84C 70%, #8B6914 100%); position: relative; overflow: hidden; box-shadow: 0 6px 24px rgba(218,165,32,0.35), inset 0 1px 0 rgba(255,255,255,0.3); padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                <!-- Holographic shine -->
+                <div
+                  style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(115deg, transparent 20%, rgba(255,255,255,0.12) 35%, rgba(255,255,255,0.05) 45%, transparent 55%, rgba(255,255,255,0.08) 75%, transparent 90%); pointer-events: none;">
+                </div>
+                <!-- Card chip -->
+                <div
+                  style="position: absolute; top: 16px; right: 16px; width: 28px; height: 22px; background: linear-gradient(135deg, #d4af37, #f0d060, #c9a84c); border-radius: 4px; border: 1px solid rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center;">
+                  <div style="width: 16px; height: 12px; border: 1px solid rgba(0,0,0,0.12); border-radius: 2px;"></div>
+                </div>
+                <!-- Top: Logo & Badge -->
+                <div>
+                  <div
+                    style="font-size: 1.2rem; font-weight: 900; font-style: italic; color: #1a1a1a; text-shadow: 0 1px 2px rgba(255,255,255,0.4); margin-bottom: 2px;">
+                    KAA</div>
+                  <div
+                    style="display: inline-block; background: rgba(26,26,26,0.2); padding: 2px 8px; border-radius: 3px; font-size: 0.45rem; font-weight: 700; color: #1a1a1a; letter-spacing: 1.5px;">
+                    GOLD MEMBER</div>
+                </div>
+                <!-- Middle: Card Number -->
+                <div>
+                  <div
+                    style="font-size: 1.05rem; font-weight: 600; color: #1a1a1a; letter-spacing: 3.5px; font-family: 'Courier New', monospace; text-shadow: 0 1px 1px rgba(255,255,255,0.25); margin-bottom: 6px;">
+                    1234 5678 9012</div>
+                  <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+                    <div>
+                      <div
+                        style="font-size: 0.4rem; color: rgba(26,32,0,0.5); letter-spacing: 1px; margin-bottom: 1px;">
+                        MEMBER</div>
+                      <div style="font-size: 0.65rem; font-weight: 700; color: #2a2000;">홍길동</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div
+                        style="font-size: 0.4rem; color: rgba(26,32,0,0.5); letter-spacing: 1px; margin-bottom: 1px;">
+                        VALID THRU</div>
+                      <div style="font-size: 0.6rem; font-weight: 600; color: #2a2000;">12/28</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Bottom: Barcode inside card -->
+                <div
+                  style="background: rgba(255,255,255,0.92); border-radius: 6px; padding: 6px 10px; margin-top: 2px;">
+                  <div style="display: flex; align-items: flex-end; gap: 1px; height: 28px; justify-content: center;">
+                    <div style="width: 2px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 3px; height: 100%; background: transparent;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 2px; height: 100%; background: transparent;"></div>
+                    <div style="width: 2px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: transparent;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 3px; height: 100%; background: transparent;"></div>
+                    <div style="width: 2px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 2px; height: 100%; background: transparent;"></div>
+                    <div style="width: 1px; height: 80%; background: #111;"></div>
+                    <div style="width: 3px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: transparent;"></div>
+                    <div style="width: 2px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: transparent;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 2px; height: 100%; background: transparent;"></div>
+                    <div style="width: 3px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 80%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: transparent;"></div>
+                    <div style="width: 2px; height: 100%; background: #111;"></div>
+                    <div style="width: 2px; height: 100%; background: transparent;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 3px; height: 100%; background: transparent;"></div>
+                    <div style="width: 2px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 80%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: transparent;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 2px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: transparent;"></div>
+                    <div style="width: 3px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: transparent;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 2px; height: 80%; background: #111;"></div>
+                    <div style="width: 2px; height: 100%; background: transparent;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                    <div style="width: 3px; height: 100%; background: transparent;"></div>
+                    <div style="width: 2px; height: 100%; background: #111;"></div>
+                    <div style="width: 1px; height: 100%; background: #111;"></div>
+                  </div>
+                  <div
+                    style="font-size: 0.4rem; color: #666; text-align: center; margin-top: 3px; letter-spacing: 2px; font-family: 'Courier New', monospace;">
+                    8 801234 567890</div>
+                </div>
+              </div>
+
+              <!-- Quick Benefit Cards -->
+              <div style="margin: 0 14px 8px; display: flex; gap: 6px;">
+                <div
+                  style="flex: 1; padding: 10px 6px; border-radius: 10px; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.12); text-align: center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"
+                    style="margin-bottom: 4px;">
+                    <path d="M3 22V8l9-6 9 6v14" />
+                    <path d="M9 22V12h6v10" />
+                    <circle cx="12" cy="9" r="1.5" fill="#60a5fa" />
+                  </svg>
+                  <div style="font-size: 0.5rem; color: var(--text-secondary); font-weight: 600;">이번 달 절감</div>
+                  <div style="font-size: 0.7rem; font-weight: 800; color: #60a5fa;">₩47,200</div>
+                </div>
+                <div
+                  style="flex: 1; padding: 10px 6px; border-radius: 10px; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.12); text-align: center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"
+                    style="margin-bottom: 4px;">
+                    <rect x="3" y="8" width="18" height="13" rx="2" />
+                    <path d="M12 8V5a3 3 0 0 0-6 0v3" />
+                    <path d="M12 8V5a3 3 0 0 1 6 0v3" />
+                    <path d="M12 8v13" />
+                  </svg>
+                  <div style="font-size: 0.5rem; color: var(--text-secondary); font-weight: 600;">쿠폰</div>
+                  <div style="font-size: 0.7rem; font-weight: 800; color: #f59e0b;">12개</div>
+                </div>
+                <div
+                  style="flex: 1; padding: 10px 6px; border-radius: 10px; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.12); text-align: center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"
+                    style="margin-bottom: 4px;">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  </svg>
+                  <div style="font-size: 0.5rem; color: var(--text-secondary); font-weight: 600;">총 절감액</div>
+                  <div style="font-size: 0.7rem; font-weight: 800; color: #10b981;">₩523K</div>
+                </div>
+              </div>
+
+              <!-- Gifticon Notification -->
+              <div
+                style="margin: 0 14px 6px; padding: 10px 14px; border-radius: 10px; background: linear-gradient(135deg, rgba(245,158,11,0.06), rgba(59,130,246,0.04)); border: 1px solid rgba(245,158,11,0.1); display: flex; align-items: center; gap: 10px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+                  <rect x="2" y="6" width="20" height="16" rx="2" />
+                  <path d="M2 10h20" />
+                  <path d="M12 6v16" />
+                  <path d="M12 6c-1.5-2-4-3-4-3s2.5 1 4 3c1.5-2 4-3 4-3s-2.5 1-4 3" />
+                </svg>
+                <div>
+                  <div style="font-size: 0.6rem; font-weight: 700; color: var(--text-primary);">가입 즉시 지급</div>
+                  <div style="font-size: 0.5rem; color: #f59e0b;">주유 기프티콘 5만원권 도착!</div>
+                </div>
+                <div style="margin-left: auto; width: 6px; height: 6px; background: #ef4444; border-radius: 50%;"></div>
+              </div>
+
+              <!-- Fuel Discount Banner -->
+              <div
+                style="margin: 0 14px; padding: 8px 14px; border-radius: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 10px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)"
+                  stroke-width="2">
+                  <path d="M3 22V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v17" />
+                  <path d="M15 12h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2v0a1 1 0 0 0 1-1V9l-3-3" />
+                  <rect x="6" y="7" width="6" height="5" rx="1" />
+                </svg>
+                <div style="font-size: 0.55rem; color: var(--text-secondary);">전국 제휴 주유소 리터당 <span
+                    style="color: #f59e0b; font-weight: 700;">50원</span> 할인</div>
+              </div>
+
+              <!-- Bottom Navigation -->
+              <div
+                style="margin-top: auto; width: 100%; padding: 10px 6px 14px; display: flex; justify-content: space-around; border-top: 1px solid rgba(255,255,255,0.06); background: rgba(10,14,26,0.95);">
+                <div style="text-align: center; flex: 1;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5">
+                    <rect x="3" y="11" width="18" height="10" rx="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    <circle cx="12" cy="16" r="1" />
+                  </svg>
+                  <div style="font-size: 0.42rem; color: #60a5fa; font-weight: 600; margin-top: 3px;">렌터카</div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)"
+                    stroke-width="1.5">
+                    <path
+                      d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1L11 12l-2 3H6l-1 1 3 2 2 3 1-1v-3l3-2 3.7 7.3c.2.4.7.5 1.1.3l.5-.3c.4-.2.5-.6.4-1.1z" />
+                  </svg>
+                  <div style="font-size: 0.42rem; color: rgba(255,255,255,0.4); font-weight: 600; margin-top: 3px;">
+                    항공/숙박</div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)"
+                    stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+                  <div style="font-size: 0.42rem; color: rgba(255,255,255,0.4); font-weight: 600; margin-top: 3px;">인슈런스
+                  </div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)"
+                    stroke-width="1.5">
+                    <path d="M15.6 11.6L22 7v10l-6.4-4.5" />
+                    <rect x="2" y="7" width="14" height="10" rx="2" />
+                    <path d="M12 11v-1a2 2 0 0 0-4 0v1" />
+                  </svg>
+                  <div style="font-size: 0.42rem; color: rgba(255,255,255,0.4); font-weight: 600; margin-top: 3px;">
+                    ERS구난</div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)"
+                    stroke-width="1.5">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                  <div style="font-size: 0.42rem; color: rgba(255,255,255,0.4); font-weight: 600; margin-top: 3px;">마이
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
