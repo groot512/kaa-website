@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAA 한국자동차협회 | Premium Mobility Service</title>
+  <meta name="description" content="한국자동차협회(KAA)와 함께 유류비 절감, 기프티콘 할인, 글로벌 멤버십 혜택을 누리세요. 스마트한 자동차 라이프를 위한 프리미엄 서비스.">
+  <meta property="og:title" content="KAA 한국자동차협회 | Premium Mobility Service">
+  <meta property="og:description" content="유료 멤버십 가입으로 유류비 최대 15% 절약! 기프티콘 할인, 글로벌 서비스까지.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233B82F6'/><text x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' font-size='50' font-weight='bold' fill='white'>K</text></svg>">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ════════════════════════════════════
+       NAVIGATION
+       ════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">K</div>
+        <span>KAA</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            KAA 소개
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#about" class="nav-dropdown-item">회사소개</a>
+            <a href="#" class="nav-dropdown-item">CEO 인사말</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="#business" class="nav-dropdown-item">사업 영역</a>
+            <a href="#partners" class="nav-dropdown-item">파트너사</a>
+            <a href="#" class="nav-dropdown-item">오시는 길</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#membership" class="nav-link">
+            💎 멤버십
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#membership" class="nav-dropdown-item">멤버십 안내</a>
+            <a href="#membership" class="nav-dropdown-item">등급별 혜택</a>
+            <a href="#calculator" class="nav-dropdown-item">절감액 계산기</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="#app" class="nav-dropdown-item">📱 앱 다운로드</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#benefits" class="nav-link">
+            🚗 서비스
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#benefits" class="nav-dropdown-item">국내 서비스</a>
+            <a href="#" class="nav-dropdown-item">해외 서비스</a>
+            <a href="#benefits" class="nav-dropdown-item">기프티콘 / 할인</a>
+            <a href="#benefits" class="nav-dropdown-item">유류비 절감</a>
+            <a href="#" class="nav-dropdown-item">국제운전면허증</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            📚 교육/자격
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-item">KAA 중앙교육원</a>
+            <a href="#" class="nav-dropdown-item">평생교육원</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="#" class="nav-dropdown-item">자동차전문평가사</a>
+            <a href="#" class="nav-dropdown-item">교통안전지도사</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#news" class="nav-link">협회 소식</a>
+        </li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#membership" class="btn btn-primary btn-sm">무료 가입</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════
+       HERO SECTION
+       ════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-gradient"></div>
+    <div class="particles-container" id="particles"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          지금 가입하면 특별 혜택 제공
+        </div>
+
+        <h1 class="hero-title">
+          당신의 자동차 생활을<br>
+          <span class="highlight">더 스마트하게</span>
+        </h1>
+
+        <p class="hero-desc">
+          한국자동차협회 프리미엄 멤버십으로 유류비 절감, 기프티콘 할인, 
+          글로벌 로드서비스까지. 연간 최대 <strong style="color: var(--accent-gold);">150만원</strong> 이상 절약하세요.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#membership" class="btn btn-primary btn-lg magnetic-btn">
+            멤버십 가입하기
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#benefits" class="btn btn-secondary btn-lg">
+            혜택 알아보기
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value gradient-text" data-count="150000">0</div>
+            <div class="hero-stat-label">누적 회원 수</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value gradient-text-gold" data-count="15">0</div>
+            <div class="hero-stat-label">최대 할인율 (%)</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value gradient-text" data-count="500">0</div>
+            <div class="hero-stat-label">제휴 가맹점</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-3d-card" id="heroCard">
+          <div class="card-3d-front holographic">
+            <div class="card-3d-logo">K</div>
+            <h2 class="card-3d-title">KAA 멤버십</h2>
+            <p class="card-3d-subtitle">Premium Global Membership</p>
+            <div class="card-3d-features">
+              <div class="card-3d-feature">
+                <div class="card-3d-feature-icon">⛽</div>
+                <span>유류비 최대 15% 절감</span>
+              </div>
+              <div class="card-3d-feature">
+                <div class="card-3d-feature-icon">🎁</div>
+                <span>기프티콘 상시 할인</span>
+              </div>
+              <div class="card-3d-feature">
+                <div class="card-3d-feature-icon">🌍</div>
+                <span>글로벌 로드서비스</span>
+              </div>
+              <div class="card-3d-feature">
+                <div class="card-3d-feature-icon">🛡️</div>
+                <span>자동차 보험 할인</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-orb hero-orb-1"></div>
+          <div class="hero-orb hero-orb-2"></div>
+          <div class="hero-orb hero-orb-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       BENEFITS SECTION
+       ════════════════════════════════════ -->
+  <section class="section" id="benefits">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-label">Membership Benefits</span>
+        <h2 class="section-heading">회원이라면 누리는 특별한 혜택</h2>
+        <p class="section-desc">KAA 멤버십으로 매일 절약하세요. 유류비부터 기프티콘까지, 실질적인 혜택이 가득합니다.</p>
+      </div>
+
+      <div class="benefits-grid stagger-children">
+        <div class="glass-card benefit-card tilt-card">
+          <div class="benefit-icon">⛽</div>
+          <h3 class="benefit-title">유류비 절감</h3>
+          <div class="benefit-value gradient-text-gold" data-count="15">0%</div>
+          <p class="benefit-desc">제휴 주유소에서 최대 15% 할인. 월 평균 5만원 이상 절약</p>
+        </div>
+
+        <div class="glass-card benefit-card tilt-card">
+          <div class="benefit-icon">🎁</div>
+          <h3 class="benefit-title">기프티콘 할인</h3>
+          <div class="benefit-value gradient-text" data-count="30">0%</div>
+          <p class="benefit-desc">커피, 편의점, 외식 기프티콘 최대 30% 할인 구매</p>
+        </div>
+
+        <div class="glass-card benefit-card tilt-card">
+          <div class="benefit-icon">🛡️</div>
+          <h3 class="benefit-title">보험 할인</h3>
+          <div class="benefit-value gradient-text-gold" data-count="10">0%</div>
+          <p class="benefit-desc">제휴 보험사 자동차보험 최대 10% 특별 할인</p>
+        </div>
+
+        <div class="glass-card benefit-card tilt-card">
+          <div class="benefit-icon">🌍</div>
+          <h3 class="benefit-title">글로벌 서비스</h3>
+          <div class="benefit-value gradient-text" data-count="190">0</div>
+          <p class="benefit-desc">전 세계 190개국 로드서비스, 국제운전면허증 발급</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       MEMBERSHIP SECTION
+       ════════════════════════════════════ -->
+  <section class="section" id="membership" style="background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-label">Membership Plans</span>
+        <h2 class="section-heading">나에게 맞는 멤버십을 선택하세요</h2>
+        <p class="section-desc">모든 등급에 기본 혜택이 포함됩니다. 상위 등급일수록 더 많은 할인과 프리미엄 서비스를 제공합니다.</p>
+      </div>
+
+      <div class="membership-cards stagger-children">
+        <!-- Silver -->
+        <div class="membership-card silver tilt-card holographic">
+          <div class="membership-icon">🥈</div>
+          <h3 class="membership-name">Silver</h3>
+          <p class="membership-period">1년 이용권</p>
+          <div class="membership-price">₩59,000</div>
+          <p class="membership-price-label">연간 / VAT 포함</p>
+          <div class="membership-features">
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>유류비 5% 할인</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>기프티콘 10% 할인</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>국내 로드서비스</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>자동차신문 디지털 구독</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>기본 교육 프로그램</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-secondary" style="width: 100%;">Silver 가입하기</a>
+        </div>
+
+        <!-- Gold (추천) -->
+        <div class="membership-card gold tilt-card holographic">
+          <div class="membership-popular">추천</div>
+          <div class="membership-icon">🥇</div>
+          <h3 class="membership-name" style="color: var(--accent-gold);">Gold</h3>
+          <p class="membership-period">5년 이용권</p>
+          <div class="membership-price" style="color: var(--accent-gold);">₩199,000</div>
+          <p class="membership-price-label">5년간 / VAT 포함</p>
+          <div class="membership-features">
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>유류비 <strong>10%</strong> 할인</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>기프티콘 <strong>20%</strong> 할인</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>국내 + 해외 로드서비스</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>자동차보험 <strong>7%</strong> 할인</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>프리미엄 교육 프로그램</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>국제운전면허증 무료 발급</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-gold" style="width: 100%;">Gold 가입하기 ⭐</a>
+        </div>
+
+        <!-- Platinum -->
+        <div class="membership-card platinum tilt-card holographic">
+          <div class="membership-icon">💎</div>
+          <h3 class="membership-name">Platinum</h3>
+          <p class="membership-period">10년 이용권</p>
+          <div class="membership-price">₩399,000</div>
+          <p class="membership-price-label">10년간 / VAT 포함</p>
+          <div class="membership-features">
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>유류비 <strong>15%</strong> 할인</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>기프티콘 <strong>30%</strong> 할인</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>VIP 글로벌 로드서비스</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>자동차보험 <strong>10%</strong> 할인</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>전체 교육 프로그램 무료</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>국제운전면허증 무료 + 갱신</span>
+            </div>
+            <div class="membership-feature">
+              <span class="check">✓</span>
+              <span>전용 컨시어지 서비스</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" style="width: 100%;">Platinum 가입하기</a>
+        </div>
+      </div>
+
+      <!-- Savings Calculator -->
+      <div class="glass-card calculator-widget reveal" id="calculator">
+        <h3 class="calc-title">💰 절감액 시뮬레이터</h3>
+        <p class="calc-desc">월 평균 주행거리를 입력하면 연간 절감액을 확인할 수 있습니다</p>
+        <div class="calc-input-group">
+          <label class="calc-label" for="monthlyKm">월 평균 주행거리 (km)</label>
+          <input type="number" id="monthlyKm" class="calc-input" placeholder="예: 1500" value="1500">
+        </div>
+        <div class="calc-input-group">
+          <label class="calc-label" for="fuelPrice">현재 유가 (원/L)</label>
+          <input type="number" id="fuelPrice" class="calc-input" placeholder="예: 1700" value="1700">
+        </div>
+        <div class="calc-result" id="calcResult">
+          <p class="calc-result-label">Platinum 회원 기준 연간 예상 절감액</p>
+          <div class="calc-result-value" id="savingsValue">₩0</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       BUSINESS AREAS
+       ════════════════════════════════════ -->
+  <section class="section" id="business">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-label">Business Areas</span>
+        <h2 class="section-heading">KAA의 핵심 사업 영역</h2>
+        <p class="section-desc">모빌리티, 보험, 교육, 평가 등 자동차 산업 전반을 아우르는 종합 서비스를 제공합니다.</p>
+      </div>
+
+      <div class="business-grid stagger-children">
+        <div class="glass-card business-card tilt-card">
+          <div class="business-number">01</div>
+          <div class="business-icon">🔗</div>
+          <h3 class="business-name">플랫폼 사업부</h3>
+          <p class="business-desc">자동차 관련 종합 플랫폼 구축 및 운영. 회원 서비스, 기프티콘, 할인 혜택 등 디지털 서비스 제공.</p>
+        </div>
+
+        <div class="glass-card business-card tilt-card">
+          <div class="business-number">02</div>
+          <div class="business-icon">🛡️</div>
+          <h3 class="business-name">인슈런스 사업</h3>
+          <p class="business-desc">자동차 보험 비교 및 할인 서비스. 제휴 보험사를 통한 회원 전용 특별 보험료 할인 제공.</p>
+        </div>
+
+        <div class="glass-card business-card tilt-card">
+          <div class="business-number">03</div>
+          <div class="business-icon">🚗</div>
+          <h3 class="business-name">모빌리티 사업</h3>
+          <p class="business-desc">스마트 모빌리티 서비스 제공. 렌터카, 카셰어링, 긴급출동 등 이동의 편의를 높입니다.</p>
+        </div>
+
+        <div class="glass-card business-card tilt-card">
+          <div class="business-number">04</div>
+          <div class="business-icon">📊</div>
+          <h3 class="business-name">KAA 평가사업</h3>
+          <p class="business-desc">자동차 전문 평가 서비스. 중고차 가치 평가, 차량 상태 진단 등 전문 평가 시스템 운영.</p>
+        </div>
+
+        <div class="glass-card business-card tilt-card">
+          <div class="business-number">05</div>
+          <div class="business-icon">🎓</div>
+          <h3 class="business-name">KAA 교육사업</h3>
+          <p class="business-desc">자동차전문평가사, 교통안전지도사 등 전문 자격증 교육 및 평생교육원 운영.</p>
+        </div>
+
+        <div class="glass-card business-card tilt-card">
+          <div class="business-number">06</div>
+          <div class="business-icon">🌐</div>
+          <h3 class="business-name">글로벌 서비스</h3>
+          <p class="business-desc">190개국 국제협약 기반의 글로벌 로드서비스. 해외 긴급출동, 국제운전면허증 발급.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       PARTNERS SECTION
+       ════════════════════════════════════ -->
+  <section class="section" id="partners" style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-label">Partners</span>
+        <h2 class="section-heading" style="font-size: clamp(1.5rem, 3vw, 2rem);">신뢰할 수 있는 파트너와 함께합니다</h2>
+      </div>
+    </div>
+    <div class="partners-belt">
+      <div class="partners-track" id="partnersTrack">
+        <span class="partner-logo">GS칼텍스</span>
+        <span class="partner-logo">SK에너지</span>
+        <span class="partner-logo">현대자동차</span>
+        <span class="partner-logo">삼성화재</span>
+        <span class="partner-logo">KB손해보험</span>
+        <span class="partner-logo">스타벅스</span>
+        <span class="partner-logo">CU편의점</span>
+        <span class="partner-logo">롯데렌탈</span>
+        <span class="partner-logo">기아자동차</span>
+        <span class="partner-logo">한화손해보험</span>
+        <span class="partner-logo">GS25</span>
+        <span class="partner-logo">쏘카</span>
+        <!-- Duplicated for infinite scroll -->
+        <span class="partner-logo">GS칼텍스</span>
+        <span class="partner-logo">SK에너지</span>
+        <span class="partner-logo">현대자동차</span>
+        <span class="partner-logo">삼성화재</span>
+        <span class="partner-logo">KB손해보험</span>
+        <span class="partner-logo">스타벅스</span>
+        <span class="partner-logo">CU편의점</span>
+        <span class="partner-logo">롯데렌탈</span>
+        <span class="partner-logo">기아자동차</span>
+        <span class="partner-logo">한화손해보험</span>
+        <span class="partner-logo">GS25</span>
+        <span class="partner-logo">쏘카</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       APP DOWNLOAD SECTION
+       ════════════════════════════════════ -->
+  <section class="section app-section" id="app">
+    <div class="container">
+      <div class="app-grid">
+        <div class="app-phone reveal-left">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-app-icon">K</div>
+              <div class="phone-app-name">KAA 멤버십</div>
+              <div class="phone-app-desc">My Membership</div>
+              <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 8px; width: 100%;">
+                <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 10px; font-size: 0.75rem; text-align: left;">
+                  ⛽ 이번 달 절감액: <strong>₩47,200</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 10px; font-size: 0.75rem; text-align: left;">
+                  🎁 사용 가능 쿠폰: <strong>12개</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 10px; font-size: 0.75rem; text-align: left;">
+                  🏆 등급: <strong>Gold</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-content reveal-right">
+          <span class="section-label">Mobile App</span>
+          <h3>손끝에서 만나는<br><span class="gradient-text">스마트 멤버십</span></h3>
+          <p style="color: var(--text-secondary); margin-bottom: 24px;">
+            KAA 멤버십 앱 하나로 모든 혜택을 관리하세요. 실시간 할인 쿠폰, 근처 제휴 가맹점 찾기, 주유 할인까지.
+          </p>
+          <div class="app-features">
+            <div class="app-feature">
+              <div class="app-feature-icon">📍</div>
+              <span>주변 제휴 주유소 & 가맹점 찾기</span>
+            </div>
+            <div class="app-feature">
+              <div class="app-feature-icon">🎟️</div>
+              <span>실시간 기프티콘 & 할인쿠폰 관리</span>
+            </div>
+            <div class="app-feature">
+              <div class="app-feature-icon">📊</div>
+              <span>월별 절감액 리포트 확인</span>
+            </div>
+            <div class="app-feature">
+              <div class="app-feature-icon">🆘</div>
+              <span>원터치 긴급출동 요청</span>
+            </div>
+          </div>
+          <div class="app-buttons">
+            <a href="#" class="store-btn">
+              <span class="store-btn-icon">🍎</span>
+              <div class="store-btn-text">
+                <span class="store-btn-label">Download on the</span>
+                <span class="store-btn-name">App Store</span>
+              </div>
+            </a>
+            <a href="#" class="store-btn">
+              <span class="store-btn-icon">▶️</span>
+              <div class="store-btn-text">
+                <span class="store-btn-label">Get it on</span>
+                <span class="store-btn-name">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       NEWS SECTION
+       ════════════════════════════════════ -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-label">Latest News</span>
+        <h2 class="section-heading">협회 소식</h2>
+        <p class="section-desc">한국자동차협회의 최신 뉴스와 공지사항을 확인하세요.</p>
+      </div>
+
+      <div class="news-grid stagger-children">
+        <div class="glass-card news-card">
+          <div class="news-image">📰</div>
+          <div class="news-body">
+            <span class="news-date">2026.02.23</span>
+            <h4 class="news-title">KAA 멤버십 앱 리뉴얼 출시 안내</h4>
+            <p class="news-excerpt">더욱 편리해진 KAA 멤버십 앱이 새롭게 출시되었습니다. 기프티콘 구매, 주유소 찾기 등 새로운 기능을 만나보세요.</p>
+          </div>
+        </div>
+
+        <div class="glass-card news-card">
+          <div class="news-image">🏆</div>
+          <div class="news-body">
+            <span class="news-date">2026.02.20</span>
+            <h4 class="news-title">2026년 자동차전문평가사 자격시험 일정</h4>
+            <p class="news-excerpt">2026년도 상반기 자동차전문평가사 자격시험 일정이 확정되었습니다. 교육 프로그램과 함께 확인하세요.</p>
+          </div>
+        </div>
+
+        <div class="glass-card news-card">
+          <div class="news-image">🤝</div>
+          <div class="news-body">
+            <span class="news-date">2026.02.15</span>
+            <h4 class="news-title">GS칼텍스 파트너십 확대 체결</h4>
+            <p class="news-excerpt">GS칼텍스와의 파트너십이 확대되어 회원 할인율이 기존 대비 5%p 상향되었습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="#" class="btn btn-secondary">전체 소식 보기 →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       CTA SECTION
+       ════════════════════════════════════ -->
+  <section class="section" style="padding: 100px 0; background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(139, 92, 246, 0.05));">
+    <div class="container text-center reveal">
+      <span class="section-label">Start Today</span>
+      <h2 class="section-heading" style="max-width: 700px; margin: 0 auto 24px;">
+        지금 바로 스마트한<br>자동차 라이프를 시작하세요
+      </h2>
+      <p class="section-desc" style="margin-bottom: 40px;">
+        무료 회원가입만으로도 기본 혜택을 받으실 수 있습니다.<br>
+        프리미엄 멤버십으로 업그레이드하면 더 많은 절약이 가능합니다.
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#membership" class="btn btn-gold btn-lg magnetic-btn">멤버십 가입하기 →</a>
+        <a href="#" class="btn btn-secondary btn-lg">상담 문의하기</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>
+            <span style="display: inline-flex; align-items: center; gap: 8px;">
+              <span style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: 900; color: white;">K</span>
+              KAA 한국자동차협회
+            </span>
+          </h4>
+          <p>한국자동차협회(주)는 대한민국의 자동차 문화 발전과 운전자 권익 보호를 위해 설립된 단체입니다. 글로벌 멤버십 서비스를 통해 회원분들께 최고의 혜택을 제공합니다.</p>
+          <p style="font-size: 0.75rem;">사업자등록번호: 000-00-00000</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>서비스</h5>
+          <div class="footer-links">
+            <a href="#membership" class="footer-link">멤버십 안내</a>
+            <a href="#benefits" class="footer-link">회원 혜택</a>
+            <a href="#" class="footer-link">국내 서비스</a>
+            <a href="#" class="footer-link">해외 서비스</a>
+            <a href="#" class="footer-link">국제운전면허증</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>협회</h5>
+          <div class="footer-links">
+            <a href="#" class="footer-link">협회 안내</a>
+            <a href="#" class="footer-link">자격시험</a>
+            <a href="#" class="footer-link">교육 프로그램</a>
+            <a href="#" class="footer-link">자동차신문</a>
+            <a href="#" class="footer-link">실천서명운동</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>고객지원</h5>
+          <div class="footer-links">
+            <a href="#" class="footer-link">공지사항</a>
+            <a href="#" class="footer-link">FAQ</a>
+            <a href="#" class="footer-link">Q&A 문의</a>
+            <a href="#" class="footer-link">이용약관</a>
+            <a href="#" class="footer-link">개인정보처리방침</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 한국자동차협회(KAA). All rights reserved.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="네이버 블로그">📝</a>
+          <a href="#" aria-label="유튜브">📺</a>
+          <a href="#" aria-label="인스타그램">📸</a>
+          <a href="#" aria-label="카카오톡">💬</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ════════════════════════════════════
+       SCRIPTS
+       ════════════════════════════════════ -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAA 소개 | 한국자동차협회</title>
+    <meta name="description" content="한국자동차협회(KAA)는 대한민국 자동차 문화 발전과 운전자 권익 보호를 위해 설립된 협회입니다.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233B82F6'/><text x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' font-size='50' font-weight='bold' fill='white'>K</text></svg>">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        .about-hero {
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .about-hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .vision-card {
+            text-align: center;
+            padding: 48px 32px;
+        }
+
+        .vision-card .v-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .vision-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .vision-card p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .timeline {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            box-shadow: 0 0 10px var(--accent-blue-glow);
+        }
+
+        .timeline-item h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item .year {
+            font-size: 0.75rem;
+            color: var(--accent-blue-light);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .org-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+
+        .org-card {
+            padding: 40px 24px;
+        }
+
+        .org-card .org-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .org-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .org-card p {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .ceo-section {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .ceo-photo {
+            width: 300px;
+            height: 380px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.05));
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .ceo-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .ceo-info .ceo-title {
+            color: var(--accent-blue-light);
+            font-size: 0.875rem;
+            margin-bottom: 20px;
+        }
+
+        .ceo-info blockquote {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-style: italic;
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 20px;
+            margin: 24px 0;
+        }
+
+        @media (max-width: 767px) {
+
+            .vision-grid,
+            .org-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ceo-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .ceo-photo {
+                margin: 0 auto;
+                width: 200px;
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">K</div><span>KAA</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link" style="color: var(--accent-blue-light);">KAA
+                        소개</a></li>
+                <li class="nav-item"><a href="membership.html" class="nav-link">💎 멤버십</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">🚗 서비스</a></li>
+                <li class="nav-item"><a href="education.html" class="nav-link">📚 교육/자격</a></li>
+                <li class="nav-item"><a href="index.html#news" class="nav-link">협회 소식</a></li>
+            </ul>
+            <div class="nav-cta"><a href="membership.html" class="btn btn-primary btn-sm">가입하기</a></div>
+            <button class="nav-toggle" id="navToggle"
+                aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="about-hero">
+        <div class="hero-gradient"></div>
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">About KAA</span>
+                <h1>대한민국 자동차 문화를<br><span class="gradient-text">선도합니다</span></h1>
+                <p>한국자동차협회(KAA)는 운전자 권익 보호, 교통 안전 교육, 글로벌 모빌리티 서비스를 통해 대한민국 자동차 문화 발전에 기여하고 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="section-label">Vision & Mission</span>
+                <h2 class="section-heading">비전과 미션</h2>
+            </div>
+            <div class="vision-grid stagger-children">
+                <div class="glass-card vision-card tilt-card">
+                    <div class="v-icon">🔭</div>
+                    <h3>비전</h3>
+                    <p>대한민국 최고의 모빌리티 플랫폼으로 도약하여 모든 운전자에게 가치 있는 서비스를 제공합니다.</p>
+                </div>
+                <div class="glass-card vision-card tilt-card">
+                    <div class="v-icon">🎯</div>
+                    <h3>미션</h3>
+                    <p>운전자 권익 보호, 교통 안전 강화, 혁신적 자동차 서비스 개발을 통해 사회적 가치를 창출합니다.</p>
+                </div>
+                <div class="glass-card vision-card tilt-card">
+                    <div class="v-icon">💡</div>
+                    <h3>핵심 가치</h3>
+                    <p>안전(Safety), 혁신(Innovation), 신뢰(Trust), 글로벌(Global) — 4가지 핵심 가치를 추구합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO MESSAGE -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="ceo-section">
+                <div class="reveal-left">
+                    <div class="ceo-photo">👤</div>
+                </div>
+                <div class="ceo-info reveal-right">
+                    <span class="section-label">CEO Message</span>
+                    <h3>대표이사 인사말</h3>
+                    <p class="ceo-title">한국자동차협회(주) 대표이사</p>
+                    <blockquote>
+                        "한국자동차협회는 단순한 회원제 서비스를 넘어, 모든 운전자의 일상을 더 스마트하고 경제적으로 만들기 위해 끊임없이 혁신합니다. 디지털 플랫폼과 글로벌 네트워크를 통해
+                        대한민국 모빌리티 산업의 새로운 표준을 만들어 가겠습니다."
+                    </blockquote>
+                    <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.8;">
+                        협회는 수익사업의 전개와 함께 사회적 책임을 다하며, 운전자 교육, 교통 안전 캠페인, 취약 계층 지원 등 다양한 공익 활동을 이어가고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="section-label">History</span>
+                <h2 class="section-heading">협회 연혁</h2>
+            </div>
+            <div class="timeline stagger-children">
+                <div class="timeline-item">
+                    <div class="year">2026</div>
+                    <h4>디지털 플랫폼 출시</h4>
+                    <p>홈페이지 리뉴얼 및 KAA 멤버십 앱 출시. 기프티콘, 유류비 할인 서비스 시작.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">2025</div>
+                    <h4>수익사업 본격화</h4>
+                    <p>KAA 카드 서비스 런칭, 글로벌 로드서비스 190개국 확대.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">2023</div>
+                    <h4>교통지도사 자격 제도 확립</h4>
+                    <p>교통지도사 자격증 제도 시작, 교육 프로그램 체계화.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">2020</div>
+                    <h4>한국자동차신문 발행</h4>
+                    <p>자동차 산업 전문 미디어인 한국자동차신문을 발행하여 업계 정보 제공.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">2015</div>
+                    <h4>1000만 실천 서명운동</h4>
+                    <p>교통 안전 의식 제고를 위한 1000만 실천 서명운동 전개.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">설립</div>
+                    <h4>한국자동차협회 설립</h4>
+                    <p>대한민국 자동차 문화 발전과 운전자 권익 보호를 위해 한국자동차협회(주) 설립.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORGANIZATION -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="section-label">Organization</span>
+                <h2 class="section-heading">조직 구성</h2>
+            </div>
+            <div class="org-grid stagger-children">
+                <div class="glass-card org-card tilt-card">
+                    <div class="org-icon">👔</div>
+                    <h4>경영지원본부</h4>
+                    <p>재무, 인사, 법무 등 경영 전반을 관리합니다.</p>
+                </div>
+                <div class="glass-card org-card tilt-card">
+                    <div class="org-icon">🤝</div>
+                    <h4>회원서비스본부</h4>
+                    <p>멤버십 운영, 고객 상담, 제휴 관리를 담당합니다.</p>
+                </div>
+                <div class="glass-card org-card tilt-card">
+                    <div class="org-icon">💻</div>
+                    <h4>디지털플랫폼본부</h4>
+                    <p>앱 개발, IT 인프라, 디지털 서비스 혁신을 추진합니다.</p>
+                </div>
+                <div class="glass-card org-card tilt-card">
+                    <div class="org-icon">📚</div>
+                    <h4>교육연구본부</h4>
+                    <p>교통 안전 교육, 자격시험, 연구 활동을 수행합니다.</p>
+                </div>
+                <div class="glass-card org-card tilt-card">
+                    <div class="org-icon">🌍</div>
+                    <h4>글로벌사업본부</h4>
+                    <p>해외 제휴, 국제운전면허증, 글로벌 서비스를 운영합니다.</p>
+                </div>
+                <div class="glass-card org-card tilt-card">
+                    <div class="org-icon">📰</div>
+                    <h4>미디어본부</h4>
+                    <p>한국자동차신문 발행, 홍보, 콘텐츠 제작을 담당합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT INFO -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="section-label">Contact</span>
+                <h2 class="section-heading">오시는 길</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 800px; margin: 0 auto;">
+                <div class="glass-card reveal-left" style="padding: 32px;">
+                    <h4 style="margin-bottom: 20px;">📍 연락처</h4>
+                    <div
+                        style="display: flex; flex-direction: column; gap: 12px; font-size: 0.875rem; color: var(--text-secondary);">
+                        <p><strong>주소:</strong> 서울특별시 강남구</p>
+                        <p><strong>전화:</strong> 02-1234-5678</p>
+                        <p><strong>팩스:</strong> 02-1234-5679</p>
+                        <p><strong>이메일:</strong> info@kaa.co.kr</p>
+                        <p><strong>운영시간:</strong> 월~금 09:00~18:00</p>
+                    </div>
+                </div>
+                <div class="glass-card reveal-right"
+                    style="padding: 32px; height: 250px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px;">
+                    <div style="font-size: 3rem; opacity: 0.3;">🗺️</div>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">지도 (추후 Kakao Map API 연동)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4><span style="display: inline-flex; align-items: center; gap: 8px;"><span
+                                style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: 900; color: white;">K</span>
+                            KAA 한국자동차협회</span></h4>
+                    <p>한국자동차협회(주)는 대한민국의 자동차 문화 발전과 운전자 권익 보호를 위해 설립된 단체입니다.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>서비스</h5>
+                    <div class="footer-links"><a href="membership.html" class="footer-link">멤버십 안내</a><a
+                            href="services.html" class="footer-link">회원 혜택</a></div>
+                </div>
+                <div class="footer-col">
+                    <h5>협회</h5>
+                    <div class="footer-links"><a href="about.html" class="footer-link">협회 안내</a><a href="education.html"
+                            class="footer-link">자격시험</a></div>
+                </div>
+                <div class="footer-col">
+                    <h5>고객지원</h5>
+                    <div class="footer-links"><a href="#" class="footer-link">공지사항</a><a href="#"
+                            class="footer-link">FAQ</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 한국자동차협회(KAA). All rights reserved.</span>
+                <div class="footer-social"><a href="#">📝</a><a href="#">📺</a><a href="#">📸</a><a href="#">💬</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

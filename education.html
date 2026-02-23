@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교육/자격 | KAA 한국자동차협회</title>
+    <meta name="description" content="KAA 교통지도사 자격시험, 자동차 안전교육, SY끼 프로그램 등 교통 안전 전문 교육 서비스를 제공합니다.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233B82F6'/><text x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' font-size='50' font-weight='bold' fill='white'>K</text></svg>">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        .edu-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .edu-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .edu-hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .edu-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .edu-card {
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        .edu-card .edu-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .edu-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .edu-card p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .cert-process {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .cert-step {
+            text-align: center;
+            padding: 32px 20px;
+            position: relative;
+        }
+
+        .cert-step::after {
+            content: '→';
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            opacity: 0.4;
+        }
+
+        .cert-step:last-child::after {
+            display: none;
+        }
+
+        .cert-step .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .cert-step h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .cert-step p {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 16px 24px;
+            text-align: left;
+            border-bottom: 1px solid var(--glass-border);
+            font-size: 0.875rem;
+        }
+
+        .schedule-table th {
+            background: rgba(255, 255, 255, 0.03);
+            font-weight: 700;
+        }
+
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .schedule-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 3px 12px;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+        }
+
+        .status-open {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+        }
+
+        .status-soon {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-gold);
+        }
+
+        .status-closed {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--accent-red, #ef4444);
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .program-card {
+            padding: 40px;
+            display: flex;
+            gap: 24px;
+        }
+
+        .program-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .program-card h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .program-card p {
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .program-card .program-meta {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 767px) {
+            .edu-features {
+                grid-template-columns: 1fr;
+            }
+
+            .cert-process {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cert-step::after {
+                display: none;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .program-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">K</div><span>KAA</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">KAA 소개</a></li>
+                <li class="nav-item"><a href="membership.html" class="nav-link">💎 멤버십</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">🚗 서비스</a></li>
+                <li class="nav-item"><a href="education.html" class="nav-link"
+                        style="color: var(--accent-blue-light);">📚 교육/자격</a></li>
+                <li class="nav-item"><a href="index.html#news" class="nav-link">협회 소식</a></li>
+            </ul>
+            <div class="nav-cta"><a href="membership.html" class="btn btn-primary btn-sm">가입하기</a></div>
+            <button class="nav-toggle" id="navToggle"
+                aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="edu-hero">
+        <div class="hero-gradient"></div>
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">Education & Certification</span>
+                <h1>교통 안전 전문<br><span class="gradient-text-gold">교육 & 자격</span></h1>
+                <p>교통지도사 자격시험부터 안전 운전 교육, SY끼 프로그램까지. 교통 안전 전문 인재를 양성합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN PROGRAMS -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="section-label">Programs</span>
+                <h2 class="section-heading">교육 프로그램</h2>
+            </div>
+            <div class="edu-features stagger-children">
+                <div class="glass-card edu-card tilt-card">
+                    <div class="edu-icon">🎓</div>
+                    <h3>교통지도사 자격시험</h3>
+                    <p>한국자동차협회가 주관하는 공인 교통지도사 자격시험. 필기 + 실기 시험을 통해 전문 자격증을 취득하세요.</p>
+                    <a href="#cert-process" class="btn btn-primary btn-sm">자세히 보기 →</a>
+                </div>
+                <div class="glass-card edu-card tilt-card">
+                    <div class="edu-icon">📚</div>
+                    <h3>SY끼 프로그램</h3>
+                    <p>어린이 · 청소년 대상 교통 안전 체험 교육 프로그램. 재미있는 활동으로 안전 의식을 키웁니다.</p>
+                    <a href="#programs" class="btn btn-secondary btn-sm">자세히 보기 →</a>
+                </div>
+                <div class="glass-card edu-card tilt-card">
+                    <div class="edu-icon">🚗</div>
+                    <h3>안전운전 교육</h3>
+                    <p>방어운전, 에코드라이빙, 고령자 안전운전 등 맞춤형 운전 교육 프로그램을 운영합니다.</p>
+                    <a href="#programs" class="btn btn-secondary btn-sm">자세히 보기 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATION PROCESS -->
+    <section class="section" id="cert-process" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="section-label">Certification Process</span>
+                <h2 class="section-heading">교통지도사 응시 절차</h2>
+                <p class="section-desc">교통 안전 전문가가 되기 위한 4단계 과정</p>
+            </div>
+            <div class="cert-process stagger-children">
+                <div class="glass-card cert-step">
+                    <div class="step-num">1</div>
+                    <h4>원서 접수</h4>
+                    <p>온라인 또는 방문 접수. 신분증, 증명사진, 응시료 필요.</p>
+                </div>
+                <div class="glass-card cert-step">
+                    <div class="step-num">2</div>
+                    <h4>필기 시험</h4>
+                    <p>교통법규, 안전지식, 지도기법 등 4과목 객관식 시험.</p>
+                </div>
+                <div class="glass-card cert-step">
+                    <div class="step-num">3</div>
+                    <h4>실기 시험</h4>
+                    <p>교통지도 실무 시뮬레이션 및 현장 실습 평가.</p>
+                </div>
+                <div class="glass-card cert-step">
+                    <div class="step-num">4</div>
+                    <h4>자격증 발급</h4>
+                    <p>합격 후 교통지도사 자격증 발급 및 등록.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXAM SCHEDULE -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="section-label">Schedule</span>
+                <h2 class="section-heading">시험 일정</h2>
+            </div>
+            <table class="schedule-table reveal">
+                <thead>
+                    <tr>
+                        <th>회차</th>
+                        <th>접수 기간</th>
+                        <th>시험일</th>
+                        <th>합격 발표</th>
+                        <th>상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>2026년 1회</strong></td>
+                        <td>2026.03.01 ~ 03.31</td>
+                        <td>2026.04.20</td>
+                        <td>2026.05.10</td>
+                        <td><span class="status-badge status-soon">접수 예정</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>2026년 2회</strong></td>
+                        <td>2026.06.01 ~ 06.30</td>
+                        <td>2026.07.20</td>
+                        <td>2026.08.10</td>
+                        <td><span class="status-badge status-soon">접수 예정</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>2026년 3회</strong></td>
+                        <td>2026.09.01 ~ 09.30</td>
+                        <td>2026.10.19</td>
+                        <td>2026.11.10</td>
+                        <td><span class="status-badge status-closed">미정</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- OTHER PROGRAMS -->
+    <section class="section" id="programs" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="section-label">Other Programs</span>
+                <h2 class="section-heading">기타 교육 프로그램</h2>
+            </div>
+            <div class="programs-grid stagger-children">
+                <div class="glass-card program-card tilt-card">
+                    <div class="program-icon">👶</div>
+                    <div>
+                        <h3>어린이 교통 안전 교육</h3>
+                        <p>초등학교 대상 찾아가는 교통 안전 교육. 횡단보도, 안전벨트, 자전거 안전 등 체험형 교육 진행.</p>
+                        <div class="program-meta">대상: 초등학생 · 기간: 연중 · 비용: 무료</div>
+                    </div>
+                </div>
+                <div class="glass-card program-card tilt-card">
+                    <div class="program-icon">🧓</div>
+                    <div>
+                        <h3>고령운전자 안전교육</h3>
+                        <p>65세 이상 고령 운전자를 위한 맞춤형 안전운전 교육. 인지능력 검사 및 방어운전 교육 포함.</p>
+                        <div class="program-meta">대상: 65세 이상 · 기간: 분기별 · 비용: 무료</div>
+                    </div>
+                </div>
+                <div class="glass-card program-card tilt-card">
+                    <div class="program-icon">🌱</div>
+                    <div>
+                        <h3>에코 드라이빙</h3>
+                        <p>연료 절약과 탄소 배출을 줄이는 친환경 운전 기법을 배울 수 있는 프로그램.</p>
+                        <div class="program-meta">대상: 일반 운전자 · 기간: 월 2회 · 비용: ₩30,000</div>
+                    </div>
+                </div>
+                <div class="glass-card program-card tilt-card">
+                    <div class="program-icon">🏁</div>
+                    <div>
+                        <h3>방어운전 교육</h3>
+                        <p>사고 예방을 위한 위험 인지 훈련, 긴급 대처 기법, 야간 운전 기술 교육.</p>
+                        <div class="program-meta">대상: 일반 운전자 · 기간: 월 1회 · 비용: ₩50,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding: 100px 0;">
+        <div class="container text-center reveal">
+            <h2 class="section-heading">교통 안전의 전문가가<br><span class="gradient-text-gold">되어보세요</span></h2>
+            <p class="section-desc" style="margin-bottom: 40px;">교통지도사 자격시험에 도전하고, 더 안전한 도로 문화를 만들어 가세요.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="#" class="btn btn-primary btn-lg">시험 접수하기 →</a>
+                <a href="#" class="btn btn-secondary btn-lg">교육 문의하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4><span style="display: inline-flex; align-items: center; gap: 8px;"><span
+                                style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: 900; color: white;">K</span>
+                            KAA 한국자동차협회</span></h4>
+                    <p>한국자동차협회(주)는 대한민국의 자동차 문화 발전과 운전자 권익 보호를 위해 설립된 단체입니다.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>서비스</h5>
+                    <div class="footer-links"><a href="membership.html" class="footer-link">멤버십 안내</a><a
+                            href="services.html" class="footer-link">회원 혜택</a></div>
+                </div>
+                <div class="footer-col">
+                    <h5>협회</h5>
+                    <div class="footer-links"><a href="about.html" class="footer-link">협회 안내</a><a href="education.html"
+                            class="footer-link">자격시험</a></div>
+                </div>
+                <div class="footer-col">
+                    <h5>고객지원</h5>
+                    <div class="footer-links"><a href="#" class="footer-link">공지사항</a><a href="#"
+                            class="footer-link">FAQ</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 한국자동차협회(KAA). All rights reserved.</span>
+                <div class="footer-social"><a href="#">📝</a><a href="#">📺</a><a href="#">📸</a><a href="#">💬</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
